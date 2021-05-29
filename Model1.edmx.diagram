@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="18954c3301d14361ac2a4cf47aa569d0" Name="Diagram1">
+        <EntityTypeShape EntityType="TRPO_KURSModel.Addresses" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRPO_KURSModel.Bills" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRPO_KURSModel.Clients" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRPO_KURSModel.Requests" Width="1.5" PointX="8.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRPO_KURSModel.RequestTypes" Width="1.5" PointX="6" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRPO_KURSModel.Resources" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRPO_KURSModel.Roles" Width="1.5" PointX="3.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRPO_KURSModel.Specialties" Width="1.5" PointX="3.75" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRPO_KURSModel.Statuses" Width="1.5" PointX="6" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRPO_KURSModel.Users" Width="1.5" PointX="6" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRPO_KURSModel.Workers" Width="1.5" PointX="6" PointY="14.875" IsExpanded="true" />
+        <AssociationConnector Association="TRPO_KURSModel.FK__Clients__Address__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="TRPO_KURSModel.FK__Bills__Client_Id__24927208" ManuallyRouted="false" />
+        <AssociationConnector Association="TRPO_KURSModel.FK__Bills__Resource___25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="TRPO_KURSModel.FK__Requests__Client__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="TRPO_KURSModel.FK__Requests__Reques__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="TRPO_KURSModel.FK__Requests__Status__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="TRPO_KURSModel.FK__Requests__User_I__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="TRPO_KURSModel.FK__Requests__Worker__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="TRPO_KURSModel.FK__Users__Role_Id__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="TRPO_KURSModel.FK__Workers__Special__1BFD2C07" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

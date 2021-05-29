@@ -1,0 +1,185 @@
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\bin\Debug\Kurs.exe.config
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\bin\Debug\Kurs.exe
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\bin\Debug\Kurs.pdb
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\Kurs.csprojAssemblyReference.cache
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\App.g.cs
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\Kurs_MarkupCompile.cache
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\Kurs_MarkupCompile.lref
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\Kurs.g.resources
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\Kurs.Properties.Resources.resources
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\Kurs.csproj.GenerateResource.cache
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\Kurs.csproj.CoreCompileInputs.cache
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\Kurs.exe
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\Kurs.pdb
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\bin\Debug\MaterialDesignColors.dll
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\App.baml
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\Kurs.csproj.CopyComplete
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\AuthWindow.g.cs
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\AuthWindow.baml
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\Main.g.cs
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\Main.baml
+E:\Kurs\bin\Debug\Kurs.exe.config
+E:\Kurs\bin\Debug\Kurs.exe
+E:\Kurs\bin\Debug\Kurs.pdb
+E:\Kurs\bin\Debug\MaterialDesignColors.dll
+E:\Kurs\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\Kurs\bin\Debug\MaterialDesignColors.pdb
+E:\Kurs\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\Kurs\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\Kurs\obj\Debug\Kurs.csprojAssemblyReference.cache
+E:\Kurs\obj\Debug\AuthWindow.g.cs
+E:\Kurs\obj\Debug\Main.g.cs
+E:\Kurs\obj\Debug\App.g.cs
+E:\Kurs\obj\Debug\Kurs_MarkupCompile.cache
+E:\Kurs\obj\Debug\Kurs_MarkupCompile.lref
+E:\Kurs\obj\Debug\App.baml
+E:\Kurs\obj\Debug\AuthWindow.baml
+E:\Kurs\obj\Debug\Main.baml
+E:\Kurs\obj\Debug\Kurs.g.resources
+E:\Kurs\obj\Debug\Kurs.Properties.Resources.resources
+E:\Kurs\obj\Debug\Kurs.csproj.GenerateResource.cache
+E:\Kurs\obj\Debug\Kurs.csproj.CopyComplete
+E:\Kurs\obj\Debug\Kurs.exe
+E:\Kurs\obj\Debug\Kurs.pdb
+D:\Kurs\bin\Debug\Kurs.exe.config
+D:\Kurs\bin\Debug\Kurs.exe
+D:\Kurs\bin\Debug\Kurs.pdb
+D:\Kurs\bin\Debug\MaterialDesignColors.dll
+D:\Kurs\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Kurs\bin\Debug\MaterialDesignColors.pdb
+D:\Kurs\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Kurs\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Kurs\obj\Debug\Kurs.csprojAssemblyReference.cache
+D:\Kurs\obj\Debug\AuthWindow.g.cs
+D:\Kurs\obj\Debug\Main.g.cs
+D:\Kurs\obj\Debug\RequestsWindow.g.cs
+D:\Kurs\obj\Debug\App.g.cs
+D:\Kurs\obj\Debug\Kurs_MarkupCompile.cache
+D:\Kurs\obj\Debug\Kurs_MarkupCompile.lref
+D:\Kurs\obj\Debug\App.baml
+D:\Kurs\obj\Debug\AuthWindow.baml
+D:\Kurs\obj\Debug\Main.baml
+D:\Kurs\obj\Debug\RequestsWindow.baml
+D:\Kurs\obj\Debug\Kurs.g.resources
+D:\Kurs\obj\Debug\Kurs.Properties.Resources.resources
+D:\Kurs\obj\Debug\Kurs.csproj.GenerateResource.cache
+D:\Kurs\obj\Debug\Kurs.csproj.CoreCompileInputs.cache
+D:\Kurs\obj\Debug\Kurs.csproj.CopyComplete
+D:\Kurs\obj\Debug\Kurs.exe
+D:\Kurs\obj\Debug\Kurs.pdb
+E:\Kurs\obj\Debug\RequestsWindow.g.cs
+E:\Kurs\obj\Debug\RequestsWindow.baml
+F:\Kurs\bin\Debug\Kurs.exe.config
+F:\Kurs\bin\Debug\Kurs.exe
+F:\Kurs\bin\Debug\Kurs.pdb
+F:\Kurs\bin\Debug\MaterialDesignColors.dll
+F:\Kurs\bin\Debug\MaterialDesignThemes.Wpf.dll
+F:\Kurs\bin\Debug\MaterialDesignColors.pdb
+F:\Kurs\bin\Debug\MaterialDesignThemes.Wpf.pdb
+F:\Kurs\bin\Debug\MaterialDesignThemes.Wpf.xml
+F:\Kurs\obj\Debug\Kurs.csprojAssemblyReference.cache
+F:\Kurs\obj\Debug\AuthWindow.g.cs
+F:\Kurs\obj\Debug\Main.g.cs
+F:\Kurs\obj\Debug\RequestsWindow.g.cs
+F:\Kurs\obj\Debug\App.g.cs
+F:\Kurs\obj\Debug\Kurs_MarkupCompile.cache
+F:\Kurs\obj\Debug\Kurs_MarkupCompile.lref
+F:\Kurs\obj\Debug\App.baml
+F:\Kurs\obj\Debug\AuthWindow.baml
+F:\Kurs\obj\Debug\Main.baml
+F:\Kurs\obj\Debug\RequestsWindow.baml
+F:\Kurs\obj\Debug\Kurs.g.resources
+F:\Kurs\obj\Debug\Kurs.Properties.Resources.resources
+F:\Kurs\obj\Debug\Kurs.csproj.GenerateResource.cache
+F:\Kurs\obj\Debug\Kurs.csproj.CoreCompileInputs.cache
+F:\Kurs\obj\Debug\Kurs.csproj.CopyComplete
+F:\Kurs\obj\Debug\Kurs.exe
+F:\Kurs\obj\Debug\Kurs.pdb
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\bin\Debug\Kurs.exe.config
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\bin\Debug\Kurs.exe
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\bin\Debug\Kurs.pdb
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\bin\Debug\MaterialDesignColors.dll
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\Kurs.csprojAssemblyReference.cache
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\AuthWindow.g.cs
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\Main.g.cs
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\RequestsWindow.g.cs
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\App.g.cs
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\Kurs_MarkupCompile.cache
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\Kurs_MarkupCompile.lref
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\App.baml
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\AuthWindow.baml
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\Main.baml
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\RequestsWindow.baml
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\Kurs.g.resources
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\Kurs.Properties.Resources.resources
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\Kurs.csproj.GenerateResource.cache
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\Kurs.csproj.CopyComplete
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\Kurs.exe
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\Kurs.pdb
+D:\Kurs\obj\Debug\MapWindow.g.cs
+D:\Kurs\obj\Debug\ReceiptsWindow.g.cs
+D:\Kurs\obj\Debug\MapWindow.baml
+D:\Kurs\obj\Debug\ReceiptsWindow.baml
+D:\Kurs\obj\Debug\TechsWindow.g.cs
+D:\Kurs\obj\Debug\TechsWindow.baml
+E:\Kurs\obj\Debug\MapWindow.g.cs
+E:\Kurs\obj\Debug\ReceiptsWindow.g.cs
+E:\Kurs\obj\Debug\TechsWindow.g.cs
+E:\Kurs\obj\Debug\MapWindow.baml
+E:\Kurs\obj\Debug\ReceiptsWindow.baml
+E:\Kurs\obj\Debug\TechsWindow.baml
+E:\Kurs\obj\Debug\RequestInfoWindow.g.cs
+E:\Kurs\obj\Debug\RequestInfoWindow.baml
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\MapWindow.g.cs
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\ReceiptsWindow.g.cs
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\RequestInfoWindow.g.cs
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\TechsWindow.g.cs
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\MapWindow.baml
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\ReceiptsWindow.baml
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\RequestInfoWindow.baml
+C:\Users\Гандон Штопаный\Desktop\Учёба\Kurs\obj\Debug\TechsWindow.baml
+F:\Kurs\obj\Debug\AdminWidow.g.cs
+F:\Kurs\obj\Debug\MapWindow.g.cs
+F:\Kurs\obj\Debug\ReceiptsWindow.g.cs
+F:\Kurs\obj\Debug\RequestInfoWindow.g.cs
+F:\Kurs\obj\Debug\TechsWindow.g.cs
+F:\Kurs\obj\Debug\AdminWidow.baml
+F:\Kurs\obj\Debug\MapWindow.baml
+F:\Kurs\obj\Debug\ReceiptsWindow.baml
+F:\Kurs\obj\Debug\RequestInfoWindow.baml
+F:\Kurs\obj\Debug\TechsWindow.baml
+F:\Kurs\bin\Debug\EntityFramework.dll
+F:\Kurs\bin\Debug\EntityFramework.SqlServer.dll
+F:\Kurs\bin\Debug\EntityFramework.xml
+F:\Kurs\bin\Debug\EntityFramework.SqlServer.xml
+F:\Kurs\bin\Debug\ru\EntityFramework.resources.dll
+F:\Kurs\obj\Debug\Kurs_Content.g.cs
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\bin\Debug\EntityFramework.dll
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\bin\Debug\GMap.NET.Core.dll
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\bin\Debug\GMap.NET.WindowsPresentation.dll
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\bin\Debug\EntityFramework.xml
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\AdminWidow.g.cs
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\MapWindow.g.cs
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\ReceiptsWindow.g.cs
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\RequestsWindow.g.cs
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\RequestInfoWindow.g.cs
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\TechsWindow.g.cs
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\Kurs_Content.g.cs
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\AdminWidow.baml
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\MapWindow.baml
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\ReceiptsWindow.baml
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\RequestsWindow.baml
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\RequestInfoWindow.baml
+C:\Users\Artem\Desktop\Проекты (учёба)\Kurs\obj\Debug\TechsWindow.baml

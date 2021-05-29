@@ -1,0 +1,154 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kurs"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Kurs.AdminWidow"
+        mc:Ignorable="d"
+        Title="ЖилУют" Height="630.573" Width="1046.955">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="604" VerticalAlignment="Top" Width="1093">
+            <TabItem Header="Заявки">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="RequestsDG" HorizontalAlignment="Left" Height="551" Margin="10,10,0,0" VerticalAlignment="Top" Width="846" IsReadOnly="True" SelectionChanged="RequestsDG_SelectionChanged"/>
+                    <TextBox x:Name="RequestId" materialDesign:HintAssist.Hint= "№ Заявки" HorizontalAlignment="Left" Height="34" Margin="861,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="RequestClientId" materialDesign:HintAssist.Hint= "№ Клиента" HorizontalAlignment="Left" Height="34" Margin="861,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <DatePicker Name="RequestDate" HorizontalAlignment="Left" materialDesign:HintAssist.Hint= "Дата заявки" Margin="861,88,0,0" VerticalAlignment="Top" Width="165" FontSize="16" Height="34"/>
+                    <TextBox x:Name="RequestTypeId" materialDesign:HintAssist.Hint= "№ Типа заявки" HorizontalAlignment="Left" Height="34" Margin="861,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="RequestDescrip" materialDesign:HintAssist.Hint= "Описание" HorizontalAlignment="Left" Height="206" Margin="861,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="RequestWorkerId" materialDesign:HintAssist.Hint= "№ Работника" HorizontalAlignment="Left" Height="34" Margin="861,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="RequestWorkerId_Copy" materialDesign:HintAssist.Hint= "№ Статуса" HorizontalAlignment="Left" Height="34" Margin="861,416,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <Button x:Name="RequestsAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="RequestsUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="RequestsDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Квитанции">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="BillsDG" HorizontalAlignment="Left" Height="551" Margin="10,10,0,0" VerticalAlignment="Top" Width="846" IsReadOnly="True"/>
+                    <TextBox x:Name="BillsId" materialDesign:HintAssist.Hint= "№ Квитанции" HorizontalAlignment="Left" Height="34" Margin="861,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="BillsYear" materialDesign:HintAssist.Hint= "Год квитанции" HorizontalAlignment="Left" Height="34" Margin="861,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="BillsMonth" materialDesign:HintAssist.Hint= "Месяц квитанции" HorizontalAlignment="Left" Height="34" Margin="861,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="BillsClientId" materialDesign:HintAssist.Hint= "№ Клиента" HorizontalAlignment="Left" Height="34" Margin="861,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="BillsResourceId" materialDesign:HintAssist.Hint= "№ Ресурса" HorizontalAlignment="Left" Height="34" Margin="861,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <CheckBox x:Name="BillsStatus" Content="Оплачено" HorizontalAlignment="Left" Margin="861,205,0,0" VerticalAlignment="Top" Width="165" Height="34" FontSize="16" Foreground="#C1000000"/>
+                    <TextBox x:Name="BillsPayment" materialDesign:HintAssist.Hint= "Сумма" HorizontalAlignment="Left" Height="34" Margin="861,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <Button x:Name="BillsAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="BillsUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="BillsDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Клиенты">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="ClientsDG" HorizontalAlignment="Left" Height="551" Margin="10,10,0,0" VerticalAlignment="Top" Width="846" IsReadOnly="True"/>
+                    <TextBox x:Name="ClientsId" materialDesign:HintAssist.Hint= "№ Клиента" HorizontalAlignment="Left" Height="34" Margin="861,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="ClientsSurname" materialDesign:HintAssist.Hint= "Фамилия" HorizontalAlignment="Left" Height="34" Margin="861,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="ClientsName" materialDesign:HintAssist.Hint= "Имя" HorizontalAlignment="Left" Height="34" Margin="861,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="ClientsLastname" materialDesign:HintAssist.Hint= "Отчество" HorizontalAlignment="Left" Height="34" Margin="861,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="ClientsAddress" materialDesign:HintAssist.Hint= "№ Адреса" HorizontalAlignment="Left" Height="34" Margin="861,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="ClientsApartment" materialDesign:HintAssist.Hint= "Квартира" HorizontalAlignment="Left" Height="34" Margin="861,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <Button x:Name="ClientsAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="ClientsUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="ClientsDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Работники">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="WorkersDG"  HorizontalAlignment="Left" Height="551" Margin="10,10,0,0" VerticalAlignment="Top" Width="846"/>
+                    <TextBox x:Name="WorkersId" materialDesign:HintAssist.Hint= "№ Работника" HorizontalAlignment="Left" Height="34" Margin="861,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="WorkersSurname" materialDesign:HintAssist.Hint= "Фамилия" HorizontalAlignment="Left" Height="34" Margin="861,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="WorkersName" materialDesign:HintAssist.Hint= "Имя" HorizontalAlignment="Left" Height="34" Margin="861,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="WorkersLastname" materialDesign:HintAssist.Hint= "Отчество" HorizontalAlignment="Left" Height="34" Margin="861,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="WorkersSpecialtyId" materialDesign:HintAssist.Hint= "№ Специальности" HorizontalAlignment="Left" Height="34" Margin="861,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <Button x:Name="WorkersAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="WorkersUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="WorkersDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Пользователи">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="UsersDG" HorizontalAlignment="Left" Height="551" Margin="10,10,0,0" VerticalAlignment="Top" Width="846"/>
+                    <TextBox x:Name="UsersId" materialDesign:HintAssist.Hint= "№ Пользователя" HorizontalAlignment="Left" Height="34" Margin="861,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="UsersLogin" materialDesign:HintAssist.Hint= "Логин" HorizontalAlignment="Left" Height="34" Margin="861,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <PasswordBox x:Name="UsersPassword" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint= "Пароль" Margin="861,88,0,0" VerticalAlignment="Top" Width="165" Height="34" FontSize="16"/>
+                    <TextBox x:Name="UsersRoleId" materialDesign:HintAssist.Hint= "№ Роли" HorizontalAlignment="Left" Height="34" Margin="861,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="UsersSurname" materialDesign:HintAssist.Hint= "Фамилия" HorizontalAlignment="Left" Height="34" Margin="861,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="UsersName" materialDesign:HintAssist.Hint= "Имя" HorizontalAlignment="Left" Height="34" Margin="861,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="UsersLastname" materialDesign:HintAssist.Hint= "Отчество" HorizontalAlignment="Left" Height="34" Margin="861,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <Button x:Name="UsersAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="UsersUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="UsersDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Специальности">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="SpecialtiesDG" HorizontalAlignment="Left" Height="551" Margin="10,10,0,0" VerticalAlignment="Top" Width="846"/>
+                    <TextBox x:Name="SpecialtiesId" materialDesign:HintAssist.Hint= "№ Специальности" HorizontalAlignment="Left" Height="34" Margin="861,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="SpecialtiesName" materialDesign:HintAssist.Hint= "Наименование" HorizontalAlignment="Left" Height="34" Margin="861,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <Button x:Name="SpecialtiesAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="SpecialtiesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="SpecialtiesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Виды пользователей">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="RolesDG" HorizontalAlignment="Left" Height="551" Margin="10,10,0,0" VerticalAlignment="Top" Width="846"/>
+                    <TextBox x:Name="RolesId" materialDesign:HintAssist.Hint= "№ Роли" HorizontalAlignment="Left" Height="34" Margin="861,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="RolesName" materialDesign:HintAssist.Hint= "Наименование" HorizontalAlignment="Left" Height="34" Margin="861,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <Button x:Name="RolesAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="RolesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="RolesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Адреса">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="AddressesDG" HorizontalAlignment="Left" Height="551" Margin="10,10,0,0" VerticalAlignment="Top" Width="846"/>
+                    <TextBox x:Name="AddressesId" materialDesign:HintAssist.Hint= "№ Адреса" HorizontalAlignment="Left" Height="34" Margin="861,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="AddressesX" materialDesign:HintAssist.Hint= "Координата X" HorizontalAlignment="Left" Height="34" Margin="861,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="AddressesY" materialDesign:HintAssist.Hint= "Координата Y" HorizontalAlignment="Left" Height="34" Margin="861,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="AddressesName" materialDesign:HintAssist.Hint= "Наименование" HorizontalAlignment="Left" Height="34" Margin="861,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <Button x:Name="AddressesAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="AddressesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="AddressesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Ресурсы">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="ResourcesDG" HorizontalAlignment="Left" Height="551" Margin="10,10,0,0" VerticalAlignment="Top" Width="846"/>
+                    <TextBox x:Name="ResourcesId" materialDesign:HintAssist.Hint= "№ Ресурса" HorizontalAlignment="Left" Height="34" Margin="861,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="ResourcesName" materialDesign:HintAssist.Hint= "Наименование" HorizontalAlignment="Left" Height="34" Margin="861,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <Button x:Name="ResourcesAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="ResourcesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="ResourcesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Типы заявок">
+                <Grid Background="#FFE5E5E5" Margin="0,0,49,0">
+                    <DataGrid x:Name="TypesDG" HorizontalAlignment="Left" Height="551" Margin="10,10,0,0" VerticalAlignment="Top" Width="846"/>
+                    <TextBox x:Name="TypesId" materialDesign:HintAssist.Hint= "№ Типа" HorizontalAlignment="Left" Height="34" Margin="861,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="TypesName" materialDesign:HintAssist.Hint= "Наименование" HorizontalAlignment="Left" Height="34" Margin="861,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <Button x:Name="TypesAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="TypesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="TypesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Статусы заявок">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="StatusesDG" HorizontalAlignment="Left" Height="551" Margin="10,10,0,0" VerticalAlignment="Top" Width="846"/>
+                    <TextBox x:Name="StatusesId" materialDesign:HintAssist.Hint= "№ Статуса" HorizontalAlignment="Left" Height="34" Margin="861,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <TextBox x:Name="StatusesName" materialDesign:HintAssist.Hint= "Наименование" HorizontalAlignment="Left" Height="34" Margin="861,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
+                    <Button x:Name="StatutusesAddBtn" Content="Добавить" HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="StatutusesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="StatutusesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Справка">
+                <Grid Background="White">
+                    <Image HorizontalAlignment="Left" Height="571" VerticalAlignment="Top" Width="1034" Source="Images/Логическая модель.png" Margin="69,2,-20,-2"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
