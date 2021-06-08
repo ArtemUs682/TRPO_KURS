@@ -52,7 +52,8 @@ namespace Kurs
                 "Payment AS Плата " +
                 "FROM Bills " +
                 "INNER JOIN Clients ON Client_Id = Clients.Id " +
-                "INNER JOIN Resources ON Resource_Id = Resources.Id ");
+                "INNER JOIN Resources ON Resource_Id = Resources.Id " +
+                "WHERE Bills.IsDeleted = 0");
             dataTable = WorkWithQuery(query);
             BillsDataGrid.ItemsSource = dataTable.DefaultView;
 
@@ -62,15 +63,16 @@ namespace Kurs
                     "INNER JOIN RequestTypes ON RequestType_Id = RequestTypes.Id " +
                     "INNER JOIN Workers ON Worker_Id = Workers.Id " +
                     "INNER JOIN Statuses ON Status_Id = Statuses.Id " +
-                    "INNER JOIN Users ON User_Id = Users.Id ";
+                    "INNER JOIN Users ON User_Id = Users.Id " +
+                    "WHERE Requests.IsDeleted = 0";
             dataTable = WorkWithQuery(query);
             RequestDataGrid.ItemsSource = dataTable.DefaultView;
 
-            query = "SELECT Id AS '№', Name AS Наименование, CONCAT(PointX, ', ', PointY) AS Координаты FROM Addresses";
+            query = "SELECT Id AS '№', Name AS Наименование, CONCAT(PointX, ', ', PointY) AS Координаты FROM Addresses WHERE Addresses.IsDeleted = 0";
             dataTable = WorkWithQuery(query);
             AddressesDataGrid.ItemsSource = dataTable.DefaultView;
 
-            query = "SELECT Clients.Id AS '№', CONCAT(Surname, ' ', Clients.Name, ' ', Lastname) AS ФИО, CONCAT(Addresses.Name, '  кв. №', Apartment_Number) AS Адрес FROM Clients INNER JOIN Addresses on Address_Id = Addresses.Id";
+            query = "SELECT Clients.Id AS '№', CONCAT(Surname, ' ', Clients.Name, ' ', Lastname) AS ФИО, CONCAT(Addresses.Name, '  кв. №', Apartment_Number) AS Адрес FROM Clients INNER JOIN Addresses on Address_Id = Addresses.Id WHERE Clients.IsDeleted = 0";
             dataTable = WorkWithQuery(query);
             ClinetsDataGrid.ItemsSource = dataTable.DefaultView;
 
@@ -95,7 +97,7 @@ namespace Kurs
                     "INSERT INTO #Vrem SELECT Users.Id , Login, @Pass, Roles.Name, CONCAT(Surname, ' ', Users.Name, ' ', Lastname)  " +
                     "FROM Users " +
                     "INNER JOIN Roles ON Role_Id = Roles.Id " +
-                    "WHERE Users.Id = @Id " +
+                    "WHERE Users.Id = @Id AND Users.IsDeleted = 0" +
                     "SET @Id = @Id + 1 " +
                     "SET @Pass = ''  " +
                     "END " +
@@ -105,27 +107,27 @@ namespace Kurs
             UsersDataGrid.ItemsSource = dataTable.DefaultView;
 
             query = "SELECT Workers.Id AS '№', CONCAT(Surname, ' ', Workers.Name, ' ', Lastname) AS ФИО, Specialties.Name AS Специальность FROM Workers " +
-                    "INNER JOIN Specialties ON Specialty_Id = Specialties.Id";
+                    "INNER JOIN Specialties ON Specialty_Id = Specialties.Id WHERE Workers.IsDeleted = 0";
             dataTable = WorkWithQuery(query);
             WorkersDataGrid.ItemsSource = dataTable.DefaultView;
 
-            query = "SELECT Id AS '№', Name AS Наименование FROM Specialties";
+            query = "SELECT Id AS '№', Name AS Наименование FROM Specialties WHERE Specialties.IsDeleted = 0";
             dataTable = WorkWithQuery(query);
             SpecialtiesDataGrid.ItemsSource = dataTable.DefaultView;
 
-            query = "SELECT Id AS '№', Name AS Наименование FROM Statuses";
+            query = "SELECT Id AS '№', Name AS Наименование FROM Statuses Statuses.IsDeleted = 0";
             dataTable = WorkWithQuery(query);
             StatusesDataGrid.ItemsSource = dataTable.DefaultView;
 
-            query = "SELECT Id AS '№', Name AS Наименование FROM RequestTypes";
+            query = "SELECT Id AS '№', Name AS Наименование FROM RequestTypes RequestTypes.IsDeleted = 0";
             dataTable = WorkWithQuery(query);
             TypesDataGrid.ItemsSource = dataTable.DefaultView;
 
-            query = "SELECT Id AS '№', Name AS Наименование FROM Resources";
+            query = "SELECT Id AS '№', Name AS Наименование FROM Resources Resources.IsDeleted = 0";
             dataTable = WorkWithQuery(query);
             ResourcesDataGrid.ItemsSource = dataTable.DefaultView;
 
-            query = "SELECT Id AS '№', Name AS Наименование FROM Roles";
+            query = "SELECT Id AS '№', Name AS Наименование FROM Roles Roles.IsDeleted = 0";
             dataTable = WorkWithQuery(query);
             RolesDataGrid.ItemsSource = dataTable.DefaultView;
         }
