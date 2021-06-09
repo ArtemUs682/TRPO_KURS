@@ -19,9 +19,9 @@
                     <TextBox x:Name="RequestDescrip" materialDesign:HintAssist.Hint= "Описание" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="206" Margin="861,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
                     <TextBox x:Name="RequestWorkerId" materialDesign:HintAssist.Hint= "№ Работника" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
                     <TextBox x:Name="RequestStatusId" materialDesign:HintAssist.Hint= "№ Статуса" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,416,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
-                    <Button x:Name="RequestsAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="RequestsUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="RequestsDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="RequestsAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165" Click="RequestsAddBtn_Click"/>
+                    <Button x:Name="RequestsUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165" Click="RequestsUpdBtn_Click"/>
+                    <Button x:Name="RequestsDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165" Click="RequestsDelBtn_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Квитанции">
@@ -34,9 +34,9 @@
                     <TextBox x:Name="BillsResourceId" materialDesign:HintAssist.Hint= "№ Ресурса" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
                     <CheckBox x:Name="BillsStatus" Content="Оплачено" HorizontalAlignment="Left" Margin="861,205,0,0" VerticalAlignment="Top" Width="165" Height="34" FontSize="16" Foreground="#C1000000"/>
                     <TextBox x:Name="BillsPayment" materialDesign:HintAssist.Hint= "Сумма" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
-                    <Button x:Name="BillsAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="BillsUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="BillsDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="BillsAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165" Click="BillsAddBtn_Click"/>
+                    <Button x:Name="BillsUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165" Click="BillsUpdBtn_Click"/>
+                    <Button x:Name="BillsDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165" Click="BillsDelBtn_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Клиенты">
@@ -48,9 +48,9 @@
                     <TextBox x:Name="ClientsLastname" materialDesign:HintAssist.Hint= "Отчество" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
                     <TextBox x:Name="ClientsAddress" materialDesign:HintAssist.Hint= "№ Адреса" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
                     <TextBox x:Name="ClientsApartment" materialDesign:HintAssist.Hint= "Квартира" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
-                    <Button x:Name="ClientsAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="ClientsUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="ClientsDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="ClientsAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165" Click="ClientsAddBtn_Click"/>
+                    <Button x:Name="ClientsUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165" Click="ClientsUpdBtn_Click"/>
+                    <Button x:Name="ClientsDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165" Click="ClientsDelBtn_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Работники">
@@ -61,9 +61,9 @@
                     <TextBox x:Name="WorkersName" materialDesign:HintAssist.Hint= "Имя" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
                     <TextBox x:Name="WorkersLastname" materialDesign:HintAssist.Hint= "Отчество" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
                     <TextBox x:Name="WorkersSpecialtyId" materialDesign:HintAssist.Hint= "№ Специальности" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
-                    <Button x:Name="WorkersAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="WorkersUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="WorkersDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="WorkersAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165" Click="WorkersAddBtn_Click"/>
+                    <Button x:Name="WorkersUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165" Click="WorkersUpdBtn_Click"/>
+                    <Button x:Name="WorkersDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165" Click="WorkersDelBtn_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Пользователи">
@@ -76,9 +76,9 @@
                     <TextBox x:Name="UsersSurname" materialDesign:HintAssist.Hint= "Фамилия" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
                     <TextBox x:Name="UsersName" materialDesign:HintAssist.Hint= "Имя" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
                     <TextBox x:Name="UsersLastname" materialDesign:HintAssist.Hint= "Отчество" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
-                    <Button x:Name="UsersAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="UsersUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="UsersDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="UsersAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165" Click="UsersAddBtn_Click"/>
+                    <Button x:Name="UsersUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165" Click="UsersUpdBtn_Click"/>
+                    <Button x:Name="UsersDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165" Click="UsersDelBtn_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Специальности">
@@ -86,9 +86,9 @@
                     <DataGrid x:Name="SpecialtiesDG" IsReadOnly="True" HorizontalAlignment="Left" Height="551" Margin="10,10,0,0" VerticalAlignment="Top" Width="846" SelectionChanged="SpecialtiesDG_SelectionChanged"/>
                     <TextBox x:Name="SpecialtiesId" IsReadOnly="True" materialDesign:HintAssist.Hint= "№ Специальности" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16" TextChanged="SpecialtiesId_TextChanged"/>
                     <TextBox x:Name="SpecialtiesName" materialDesign:HintAssist.Hint= "Наименование" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
-                    <Button x:Name="SpecialtiesAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="SpecialtiesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="SpecialtiesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="SpecialtiesAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165" Click="SpecialtiesAddBtn_Click"/>
+                    <Button x:Name="SpecialtiesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165" Click="SpecialtiesUpdBtn_Click"/>
+                    <Button x:Name="SpecialtiesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165" Click="SpecialtiesDelBtn_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Виды пользователей">
@@ -96,9 +96,9 @@
                     <DataGrid x:Name="RolesDG" IsReadOnly="True" HorizontalAlignment="Left" Height="551" Margin="10,10,0,0" VerticalAlignment="Top" Width="846" SelectionChanged="RolesDG_SelectionChanged"/>
                     <TextBox x:Name="RolesId" IsReadOnly="True" materialDesign:HintAssist.Hint= "№ Роли" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16" TextChanged="RolesId_TextChanged"/>
                     <TextBox x:Name="RolesName" materialDesign:HintAssist.Hint= "Наименование" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
-                    <Button x:Name="RolesAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="RolesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="RolesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="RolesAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165" Click="RolesAddBtn_Click"/>
+                    <Button x:Name="RolesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165" Click="RolesUpdBtn_Click"/>
+                    <Button x:Name="RolesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165" Click="RolesDelBtn_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Адреса">
@@ -108,9 +108,9 @@
                     <TextBox x:Name="AddressesX" materialDesign:HintAssist.Hint= "Координата X" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
                     <TextBox x:Name="AddressesY" materialDesign:HintAssist.Hint= "Координата Y" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
                     <TextBox x:Name="AddressesName" materialDesign:HintAssist.Hint= "Наименование" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
-                    <Button x:Name="AddressesAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="AddressesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="AddressesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="AddressesAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165" Click="AddressesAddBtn_Click"/>
+                    <Button x:Name="AddressesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165" Click="AddressesUpdBtn_Click"/>
+                    <Button x:Name="AddressesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165" Click="AddressesDelBtn_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Ресурсы">
@@ -118,9 +118,9 @@
                     <DataGrid x:Name="ResourcesDG" IsReadOnly="True" HorizontalAlignment="Left" Height="551" Margin="10,10,0,0" VerticalAlignment="Top" Width="846" SelectionChanged="ResourcesDG_SelectionChanged"/>
                     <TextBox x:Name="ResourcesId" IsReadOnly="True" materialDesign:HintAssist.Hint= "№ Ресурса" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16" TextChanged="ResourcesId_TextChanged"/>
                     <TextBox x:Name="ResourcesName" materialDesign:HintAssist.Hint= "Наименование" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
-                    <Button x:Name="ResourcesAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="ResourcesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="ResourcesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="ResourcesAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165" Click="ResourcesAddBtn_Click"/>
+                    <Button x:Name="ResourcesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165" Click="ResourcesUpdBtn_Click"/>
+                    <Button x:Name="ResourcesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165" Click="ResourcesDelBtn_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Типы заявок">
@@ -128,9 +128,9 @@
                     <DataGrid x:Name="TypesDG" IsReadOnly="True" HorizontalAlignment="Left" Height="551" Margin="10,10,0,0" VerticalAlignment="Top" Width="846" SelectionChanged="TypesDG_SelectionChanged"/>
                     <TextBox x:Name="TypesId" IsReadOnly="True" materialDesign:HintAssist.Hint= "№ Типа" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16" TextChanged="TypesId_TextChanged"/>
                     <TextBox x:Name="TypesName" materialDesign:HintAssist.Hint= "Наименование" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
-                    <Button x:Name="TypesAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="TypesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="TypesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="TypesAddBtn" Content="Добавить " HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165" Click="TypesAddBtn_Click"/>
+                    <Button x:Name="TypesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165" Click="TypesUpdBtn_Click"/>
+                    <Button x:Name="TypesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165" Click="TypesDelBtn_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Статусы заявок">
@@ -138,9 +138,9 @@
                     <DataGrid x:Name="StatusesDG" IsReadOnly="True" HorizontalAlignment="Left" Height="551" Margin="10,10,0,0" VerticalAlignment="Top" Width="846" SelectionChanged="StatusesDG_SelectionChanged"/>
                     <TextBox x:Name="StatusesId" IsReadOnly="True" materialDesign:HintAssist.Hint= "№ Статуса" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16" TextChanged="StatusesId_TextChanged"/>
                     <TextBox x:Name="StatusesName" materialDesign:HintAssist.Hint= "Наименование" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Padding="0,-1,0,4" HorizontalAlignment="Left" Height="34" Margin="861,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16"/>
-                    <Button x:Name="StatutusesAddBtn" Content="Добавить" HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="StatutusesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="StatutusesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="StatutusesAddBtn" Content="Добавить" HorizontalAlignment="Left" Margin="861,455,0,0" VerticalAlignment="Top" Width="165" Click="StatutusesAddBtn_Click"/>
+                    <Button x:Name="StatutusesUpdBtn" Content="Обновить" HorizontalAlignment="Left" Margin="861,492,0,0" VerticalAlignment="Top" Width="165" Click="StatutusesUpdBtn_Click"/>
+                    <Button x:Name="StatutusesDelBtn" Content="Удалить" HorizontalAlignment="Left" Margin="861,529,0,0" VerticalAlignment="Top" Width="165" Click="StatutusesDelBtn_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Справка">
