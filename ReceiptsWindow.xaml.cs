@@ -75,8 +75,25 @@ namespace Kurs
 
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
         {
-            string query = "AND CONCAT(Clients.Surname, ' ', Clients.Name, ' ', Clients.Lastname) Like '%" + SearchBox.Text + "%'";
-            Vivod(query);
+            if (SearchBox.Text.Contains("DELETE") || SearchBox.Text.Contains(";"))
+            {
+                MessageBox.Show("Полe содержит недопустимые значения");
+            }
+            else
+            {
+                string query = "AND CONCAT(Clients.Surname, ' ', Clients.Name, ' ', Clients.Lastname) Like '%" + SearchBox.Text + "%'";
+                Vivod(query);
+            }
+        }
+
+        private void CloseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void TurnBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
         }
     }
 }

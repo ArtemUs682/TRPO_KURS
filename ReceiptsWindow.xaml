@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Kurs"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Kurs.ReceiptsWindow"
         mc:Ignorable="d"
-Title="ReceiptsWindow" AllowsTransparency="True" Background="{x:Null}" Height="440.535" Width="765.952" WindowStyle="None">
+Title="Квитанции" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="{x:Null}" Height="440.535" Width="765.952" WindowStyle="None">
     <Grid RenderTransformOrigin="0.547,0.51" MouseDown="Grid_MouseDown">
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" CornerRadius="20" Height="443" VerticalAlignment="Top" Width="768" Margin="0,0,-336,0">
             <Border.Background>
@@ -16,8 +16,8 @@ Title="ReceiptsWindow" AllowsTransparency="True" Background="{x:Null}" Height="4
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
-        <Button Content="×" Margin="727,9,-317,0" Width="22" Background="#FFF15138" BorderBrush="#FFE4320B" Foreground="#BFFFDBDB" Height="22" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Padding="0,-2,0,0" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" FontSize="14"/>
-        <Button Content="–" Margin="703,9,-294,0" Width="23" Background="#FFDE9253" BorderBrush="#FFA2613B" Foreground="#BFFFDBDB" Height="22" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Padding="0" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" FontSize="14"/>
+        <Button x:Name="CloseBtn" Content="×" Margin="727,9,-317,0" Width="22" Background="#FFF15138" BorderBrush="#FFE4320B" Foreground="#BFFFDBDB" Height="22" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Padding="0,-2,0,0" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" FontSize="14" Click="CloseBtn_Click"/>
+        <Button x:Name="TurnBtn" Content="–" Margin="703,9,-294,0" Width="23" Background="#FFDE9253" BorderBrush="#FFA2613B" Foreground="#BFFFDBDB" Height="22" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Padding="0" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" FontSize="14" Click="TurnBtn_Click"/>
         <DataGrid x:Name="DG" HorizontalAlignment="Left" Height="397" Margin="10,36,-326,0" VerticalAlignment="Top" Width="748"/>
 
 

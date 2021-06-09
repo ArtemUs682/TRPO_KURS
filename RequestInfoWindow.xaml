@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Kurs"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Kurs.RequestInfoWindow"
         mc:Ignorable="d"
-       Title="RequestInfoWindow" AllowsTransparency="True" Background="{x:Null}" Height="473.613" Width="219.05" WindowStyle="None">
-    <Grid RenderTransformOrigin="0.547,0.51" >
+       Title="Инфо о заявке" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="{x:Null}" Height="473.613" Width="219.05" WindowStyle="None">
+    <Grid RenderTransformOrigin="0.547,0.51" MouseDown="Grid_MouseDown" >
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" CornerRadius="20" Height="473" VerticalAlignment="Top" Width="219">
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -16,8 +16,8 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
-        <Button Content="×" Margin="182,10,0,0" Width="22" Background="#FFF15138" BorderBrush="#FFE4320B" Foreground="#BFFFDBDB" Height="22" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Padding="0,-2,0,0" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" FontSize="14"/>
-        <Button Content="–" Margin="158,10,0,0" Width="23" Background="#FFDE9253" BorderBrush="#FFA2613B" Foreground="#BFFFDBDB" Height="22" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Padding="0" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" FontSize="14"/>
+        <Button x:Name="CloseBtn" Content="×" Margin="182,10,0,0" Width="22" Background="#FFF15138" BorderBrush="#FFE4320B" Foreground="#BFFFDBDB" Height="22" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Padding="0,-2,0,0" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" FontSize="14" Click="CloseBtn_Click"/>
+        <Button x:Name="TurnBtn" Content="–" Margin="158,10,0,0" Width="23" Background="#FFDE9253" BorderBrush="#FFA2613B" Foreground="#BFFFDBDB" Height="22" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Padding="0" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" FontSize="14" Click="TurnBtn_Click"/>
 
 
         <ComboBox x:Name="ClientComboBox" materialDesign:HintAssist.Hint="Клиент" HorizontalAlignment="Left" Margin="14,44,0,0" VerticalAlignment="Top" Width="190" Height="30" FontSize="18"/>

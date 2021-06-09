@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Kurs"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Kurs.AdminWidow"
         mc:Ignorable="d"
-        Title="ЖилУют" Height="630.573" Width="1046.955">
+        Title="ЖилУют" WindowStartupLocation="CenterScreen" Height="630.573" Width="1046.955">
     <Grid>
         <TabControl HorizontalAlignment="Left" Height="604" VerticalAlignment="Top" Width="1093">
             <TabItem Header="Заявки">

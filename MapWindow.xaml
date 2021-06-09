@@ -6,9 +6,9 @@
         xmlns:gmaps="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation"
         xmlns:local="clr-namespace:Kurs"
         mc:Ignorable="d"
-       Title="MapWindow" AllowsTransparency="True" Background="{x:Null}" Height="502.946" Width="945.05" WindowStyle="None">
+       Title="Карта" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="{x:Null}" Height="502.946" Width="945.05" WindowStyle="None">
     <Grid RenderTransformOrigin="0.547,0.51">
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" CornerRadius="20" Height="503" VerticalAlignment="Top" Width="945" MouseDown="Grid_MouseDown">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" CornerRadius="20" Height="503" VerticalAlignment="Top" Width="945" MouseDown="Grid_MouseDown_1">
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFDC8C00" Offset="0"/>
@@ -19,8 +19,8 @@
             
 
         </Border>
-        <Button Content="×" Margin="903,10,0,0" Width="22" Background="#FFF15138" BorderBrush="#FFE4320B" Foreground="#BFFFDBDB" Height="22" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Padding="0,-2,0,0" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" FontSize="14"/>
-        <Button Content="–" Margin="879,10,0,0" Width="23" Background="#FFDE9253" BorderBrush="#FFA2613B" Foreground="#BFFFDBDB" Height="22" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Padding="0" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" FontSize="14"/>
+        <Button x:Name="CloseBtn" Content="×" Margin="903,10,0,0" Width="22" Background="#FFF15138" BorderBrush="#FFE4320B" Foreground="#BFFFDBDB" Height="22" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Padding="0,-2,0,0" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" FontSize="14" Click="CloseBtn_Click"/>
+        <Button x:Name="TurnBtn" Content="–" Margin="879,10,0,0" Width="23" Background="#FFDE9253" BorderBrush="#FFA2613B" Foreground="#BFFFDBDB" Height="22" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Padding="0" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" FontSize="14" Click="TurnBtn_Click"/>
         <ComboBox x:Name="FindBox" HorizontalAlignment="Left" Margin="805,62,0,0" VerticalAlignment="Top" Width="133" Height="30"/>
         <Button x:Name="FindBtn" Content="Найти" HorizontalAlignment="Left" Margin="805,97,0,0" VerticalAlignment="Top" Width="130" Click="FindBtn_Click"/>
         <Border BorderBrush="Transparent" BorderThickness="1" HorizontalAlignment="Left" Height="440" Margin="20,44,0,0" VerticalAlignment="Top" Width="776">

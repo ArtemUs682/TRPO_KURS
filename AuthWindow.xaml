@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kurs"
         mc:Ignorable="d"
-        Title="AuthWindow" AllowsTransparency="True" Background="{x:Null}" Height="342.569" Width="294.977" WindowStyle="None" Foreground="{x:Null}">
+        Title="Авторизация" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="{x:Null}" Height="342.569" Width="294.977" WindowStyle="None" Foreground="{x:Null}">
     <Grid MouseDown="Grid_MouseDown">
 
         <Border BorderThickness="1" HorizontalAlignment="Left" Height="342" VerticalAlignment="Top" Width="295" CornerRadius="20" Grid.RowSpan="2">

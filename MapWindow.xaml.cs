@@ -37,20 +37,6 @@ namespace Kurs
             }
         }
 
-        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
-        }
-
-        private void AddPoint_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void RemovePoint_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void map_load(object sender, RoutedEventArgs e)
         {
@@ -100,6 +86,21 @@ namespace Kurs
                 gmap.Position = new PointLatLng(row.PointX, row.PointY);
                 gmap.Zoom = 17;
             }
+        }
+
+        private void CloseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void TurnBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void Grid_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

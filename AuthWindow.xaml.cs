@@ -41,12 +41,14 @@ namespace Kurs
                     RequestsWindow.GetUserId(row.Id);
                     Main main = new Main();
                     main.Show();
+                    this.Close();
                 }
                 if(row.Role_Id == 1)
                 {
                     AdminWidow.GetUserId(row.Id);
                     AdminWidow window = new AdminWidow();
                     window.Show();
+                    this.Close();
                 }    
                 
             }

@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kurs"
         mc:Ignorable="d" 
-        Title="Main" Background="Transparent" Height="418.333" Width="546.167" AllowsTransparency="True" WindowStyle="None">
+        Title="Меню" WindowStartupLocation="CenterScreen" Background="Transparent" Height="418.333" Width="546.167" AllowsTransparency="True" WindowStyle="None">
     <Grid MouseDown="Grid_MouseDown">
         <Grid.RowDefinitions>
             <RowDefinition/>

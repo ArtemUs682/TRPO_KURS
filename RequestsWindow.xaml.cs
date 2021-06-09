@@ -243,76 +243,86 @@ namespace Kurs
 
         private void ReportBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (StartDate.SelectedDate == null || EndDate.SelectedDate == null)
+            var row = db.Users.Where(w => w.Id == UserId).FirstOrDefault();
+            if (StartDate.SelectedDate.Value.ToString().Contains("DELETE") || StartDate.SelectedDate.Value.ToString().Contains(";") || EndDate.SelectedDate.Value.ToString().Contains("DELETE") || EndDate.SelectedDate.Value.ToString().Contains(";"))
             {
-                MessageBox.Show("Не выбрана начальная и/или конечная дата");
+                MessageBox.Show("Поля содержат недопустимые значения");
             }
             else
             {
-                string query = ("CREATE TABLE #Vrem " +
-                                "( " +
-                                "s1 NVARCHAR(300) NULL, " +
-                                "s2 NVARCHAR(100) NULL, " +
-                                "s3 NVARCHAR(100) NULL, " +
-                                "s4 NVARCHAR(100) NULL, " +
-                                "s5 NVARCHAR(300) NULL, " +
-                                "s6 NVARCHAR(300) NULL, " +
-                                "s7 NVARCHAR(300) null, " +
-                                ") " +
-                                "INSERT INTO #Vrem " +
-                                "SELECT Requests.Id, Clients.Surname + ' ' + Clients.Name + ' ' + Clients.Lastname, Date, RequestTypes.Name, Description, Workers.Surname + ' ' + Workers.Name + ' ' + Workers.Lastname, Statuses.Name FROM Requests " +
-                                "INNER JOIN Clients ON Client_Id = Clients.Id " +
-                                "INNER JOIN RequestTypes ON RequestType_Id = RequestTypes.Id " +
-                                "INNER JOIN Workers ON Worker_Id = Workers.Id " +
-                                "INNER JOIN Statuses ON Status_Id = Statuses.Id " +
-                                "INNER JOIN Users ON User_Id = Users.Id " +
-                                "WHERE Date BETWEEN '" + StartDate.SelectedDate.Value.ToShortDateString() + "' AND '" + EndDate.SelectedDate.Value.ToShortDateString() + "' " +
-                                "INSERT INTO #Vrem VALUES (null, null, null, null, null, null, null) " +
-                                "INSERT INTO #Vrem  " +
-                                "SELECT " +
-                                "CASE " +
-                                "WHEN Statuses.Name = 'Отменён' THEN 'Отменено' " +
-                                "WHEN Statuses.Name = 'Выполнен' THEN 'Выполнено' " +
-                                "END ' ',  " +
-                                "COUNT(Requests.Id) AS ' ', null, null, null, null, null FROM Requests " +
-                                "INNER JOIN Clients ON Client_Id = Clients.Id " +
-                                "INNER JOIN RequestTypes ON RequestType_Id = RequestTypes.Id " +
-                                "INNER JOIN Workers ON Worker_Id = Workers.Id " +
-                                "INNER JOIN Statuses ON Status_Id = Statuses.Id " +
-                                "INNER JOIN Users ON User_Id = Users.Id " +
-                                "WHERE Date BETWEEN '31.01.2018' AND '09.06.2021' " +
-                                "GROUP BY Statuses.Name " +
-                                "Having Statuses.Name = 'Отменён' OR Statuses.Name = 'Выполнен' " +
-                                "SELECT s1 AS 'Номер заявки', s2 AS Клиент, s3 AS Дата, s4 AS 'Тип заявки', s5 AS Описание, s6 AS 'Назначенный работник', s7 AS Статус FROM #Vrem " +
-                                "DROP TABLE #Vrem;");
-                System.Data.DataTable dataTable = new System.Data.DataTable();
-                dataTable = WorkWithQuery(query);
-
-                ///////Работа с эксель
-                Excel.Application excel = new Excel.Application();
-                Excel.Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
-                Excel.Worksheet sheet1 = (Excel.Worksheet)workbook.Sheets[1];
-
-                for (int j = 0; j < dataTable.Columns.Count; j++)
+                if (StartDate.SelectedDate == null || EndDate.SelectedDate == null)
                 {
-                    Excel.Range myRange = (Excel.Range)sheet1.Cells[1, j + 1];
-                    sheet1.Cells[1, j + 1].Font.Bold = true;
-                    sheet1.Columns[j + 1].ColumnWidth = 20;
-                    myRange.Value2 = dataTable.Columns[j].ColumnName;
+                    MessageBox.Show("Не выбрана начальная и/или конечная дата");
                 }
-                for (int i = 0; i < dataTable.Columns.Count; i++)
+                else
                 {
-                    for (int j = 0; j < dataTable.Rows.Count; j++)
+                    string query = ("CREATE TABLE #Vrem " +
+                                    "( " +
+                                    "s1 NVARCHAR(300) NULL, " +
+                                    "s2 NVARCHAR(100) NULL, " +
+                                    "s3 NVARCHAR(100) NULL, " +
+                                    "s4 NVARCHAR(100) NULL, " +
+                                    "s5 NVARCHAR(300) NULL, " +
+                                    "s6 NVARCHAR(300) NULL, " +
+                                    "s7 NVARCHAR(300) null, " +
+                                    ") " +
+                                    "INSERT INTO #Vrem " +
+                                    "SELECT Requests.Id, Clients.Surname + ' ' + Clients.Name + ' ' + Clients.Lastname, Date, RequestTypes.Name, Description, Workers.Surname + ' ' + Workers.Name + ' ' + Workers.Lastname, Statuses.Name FROM Requests " +
+                                    "INNER JOIN Clients ON Client_Id = Clients.Id " +
+                                    "INNER JOIN RequestTypes ON RequestType_Id = RequestTypes.Id " +
+                                    "INNER JOIN Workers ON Worker_Id = Workers.Id " +
+                                    "INNER JOIN Statuses ON Status_Id = Statuses.Id " +
+                                    "INNER JOIN Users ON User_Id = Users.Id " +
+                                    "WHERE Date BETWEEN '" + StartDate.SelectedDate.Value.ToShortDateString() + "' AND '" + EndDate.SelectedDate.Value.ToShortDateString() + "' " +
+                                    "INSERT INTO #Vrem VALUES (null, null, null, null, null, null, null) " +
+                                    "INSERT INTO #Vrem  " +
+                                    "SELECT " +
+                                    "CASE " +
+                                    "WHEN Statuses.Name = 'Отменён' THEN 'Отменено' " +
+                                    "WHEN Statuses.Name = 'Выполнен' THEN 'Выполнено' " +
+                                    "END ' ',  " +
+                                    "COUNT(Requests.Id) AS ' ', null, null, null, null, null FROM Requests " +
+                                    "INNER JOIN Clients ON Client_Id = Clients.Id " +
+                                    "INNER JOIN RequestTypes ON RequestType_Id = RequestTypes.Id " +
+                                    "INNER JOIN Workers ON Worker_Id = Workers.Id " +
+                                    "INNER JOIN Statuses ON Status_Id = Statuses.Id " +
+                                    "INNER JOIN Users ON User_Id = Users.Id " +
+                                    "WHERE Date BETWEEN '31.01.2018' AND '09.06.2021' " +
+                                    "GROUP BY Statuses.Name " +
+                                    "Having Statuses.Name = 'Отменён' OR Statuses.Name = 'Выполнен' " +
+                                    "INSERT INTO #Vrem VALUES ('Дата отчёта', CONCAT(DAY(GETDATE()), '.', MONTH(GETDATE()), '.', YEAR(GETDATE())), null, null, null, null, null) " +
+                                    "INSERT INTO #Vrem VALUES ('Отчет составил(а)', '" + row.Surname + " " + row.Name + " " + row.Lastname + "', null, null, null, null, null) " +
+                                    "SELECT s1 AS 'Номер заявки', s2 AS Клиент, s3 AS Дата, s4 AS 'Тип заявки', s5 AS Описание, s6 AS 'Назначенный работник', s7 AS Статус FROM #Vrem " +
+                                    "DROP TABLE #Vrem;");
+                    System.Data.DataTable dataTable = new System.Data.DataTable();
+                    dataTable = WorkWithQuery(query);
+
+                    ///////Работа с эксель
+                    Excel.Application excel = new Excel.Application();
+                    Excel.Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
+                    Excel.Worksheet sheet1 = (Excel.Worksheet)workbook.Sheets[1];
+
+                    for (int j = 0; j < dataTable.Columns.Count; j++)
                     {
-                        Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[j + 2, i + 1];
-                        myRange.Value2 = dataTable.Rows[j][i].ToString();
-                        if(sheet1.Columns[i + 1].ColumnWidth < dataTable.Rows[j][i].ToString().Length)
+                        Excel.Range myRange = (Excel.Range)sheet1.Cells[1, j + 1];
+                        sheet1.Cells[1, j + 1].Font.Bold = true;
+                        sheet1.Columns[j + 1].ColumnWidth = 20;
+                        myRange.Value2 = dataTable.Columns[j].ColumnName;
+                    }
+                    for (int i = 0; i < dataTable.Columns.Count; i++)
+                    {
+                        for (int j = 0; j < dataTable.Rows.Count; j++)
                         {
-                            sheet1.Columns[i + 1].ColumnWidth = dataTable.Rows[j][i].ToString().Length + 5;
+                            Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[j + 2, i + 1];
+                            myRange.Value2 = dataTable.Rows[j][i].ToString();
+                            if (sheet1.Columns[i + 1].ColumnWidth < dataTable.Rows[j][i].ToString().Length)
+                            {
+                                sheet1.Columns[i + 1].ColumnWidth = dataTable.Rows[j][i].ToString().Length + 5;
+                            }
                         }
                     }
+                    excel.Visible = true;
                 }
-                excel.Visible = true;
             }
         }
 
@@ -324,6 +334,16 @@ namespace Kurs
             adapter.Fill(dataTable);
             con.Close();
             return dataTable;
+        }
+
+        private void CloseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void TurnBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
         }
     }
 }
