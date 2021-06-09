@@ -20,7 +20,7 @@ namespace Kurs
     /// </summary>
     public partial class AuthWindow : Window
     {
-        public TRPO_KURSEntities db = new TRPO_KURSEntities();
+        public gr682_uatEntities db = new gr682_uatEntities();
         public AuthWindow()
         {
             InitializeComponent();

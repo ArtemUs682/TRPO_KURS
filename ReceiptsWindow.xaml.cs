@@ -21,7 +21,7 @@ namespace Kurs
     /// </summary>
     public partial class ReceiptsWindow : Window
     {
-        SqlConnection con = new SqlConnection("Data Source=ARTEM-ПК\\ArtemPC;Initial Catalog=TRPO_KURS;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=mssql;Initial Catalog=gr682_uat;Integrated Security=True");
         public ReceiptsWindow()
         {
             InitializeComponent();

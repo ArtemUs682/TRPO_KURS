@@ -25,6 +25,7 @@ namespace Kurs
         public double PointX { get; set; }
         public double PointY { get; set; }
         public bool IsDeleted { get; set; }
+        public Nullable<System.DateTime> DeletedDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Clients> Clients { get; set; }

@@ -18,7 +18,6 @@
         </Border>
         <Button Content="×" Margin="182,10,0,0" Width="22" Background="#FFF15138" BorderBrush="#FFE4320B" Foreground="#BFFFDBDB" Height="22" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Padding="0,-2,0,0" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" FontSize="14"/>
         <Button Content="–" Margin="158,10,0,0" Width="23" Background="#FFDE9253" BorderBrush="#FFA2613B" Foreground="#BFFFDBDB" Height="22" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" Padding="0" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Center" FontSize="14"/>
-        <Button x:Name ="UpdateDataBtn" Content="↻" Margin="114,10,0,0" Width="23" Background="#FF4AC180" BorderBrush="#FF309E8A" Foreground="#BFFFDBDB" Height="22" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Left" Padding="2,-6,0,0" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True" VerticalContentAlignment="Top" FontSize="22"/>
 
 
         <ComboBox x:Name="ClientComboBox" materialDesign:HintAssist.Hint="Клиент" HorizontalAlignment="Left" Margin="14,44,0,0" VerticalAlignment="Top" Width="190" Height="30" FontSize="18"/>

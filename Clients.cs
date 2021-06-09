@@ -28,6 +28,7 @@ namespace Kurs
         public int Address_Id { get; set; }
         public Nullable<int> Apartment_Number { get; set; }
         public bool IsDeleted { get; set; }
+        public Nullable<System.DateTime> DeletedDate { get; set; }
     
         public virtual Addresses Addresses { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

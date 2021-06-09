@@ -22,8 +22,8 @@ namespace Kurs
     public partial class AdminWidow : Window
     {
         public static int UseId = -1;
-        SqlConnection con = new SqlConnection("Data Source=ARTEM-ПК\\ArtemPC;Initial Catalog=TRPO_KURS;Integrated Security=True");
-        public TRPO_KURSEntities db = new TRPO_KURSEntities();
+        SqlConnection con = new SqlConnection("Data Source=mssql;Initial Catalog=gr682_uat;Integrated Security=True");
+        public gr682_uatEntities db = new gr682_uatEntities();
 
         public static void GetUserId(int i)
         {

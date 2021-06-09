@@ -20,7 +20,7 @@ namespace Kurs
     public partial class RequestInfoWindow : Window
     {
         public static int Index = -1;
-        public TRPO_KURSEntities db = new TRPO_KURSEntities();
+        public gr682_uatEntities db = new gr682_uatEntities();
         public static int UserId = -1;
 
         public static void GetUserId(int i)
@@ -38,9 +38,12 @@ namespace Kurs
             for (int i = 1; i <= db.Clients.Count(); i++)
             {
                 var row = db.Clients.Where(w => w.Id == i).FirstOrDefault();
-                if (row.IsDeleted != true)
+                if (row != null)
                 {
-                    ClientComboBox.Items.Add("[" + row.Id + "] " + row.Surname + " " + row.Name + " " + row.Lastname);
+                    if (row.IsDeleted != true)
+                    {
+                        ClientComboBox.Items.Add("[" + row.Id + "] " + row.Surname + " " + row.Name + " " + row.Lastname);
+                    }
                 }
             }
             var CLIENTrow = db.Clients.Where(w => w.Id == selectedREQ.Client_Id).FirstOrDefault();
@@ -50,9 +53,12 @@ namespace Kurs
             for (int i = 1; i <= db.RequestTypes.Count(); i++)
             {
                 var row = db.RequestTypes.Where(w => w.Id == i).FirstOrDefault();
-                if (row.IsDeleted != true)
+                if (row != null)
                 {
-                    TypesComboBox.Items.Add(row.Name);
+                    if (row.IsDeleted != true)
+                    {
+                        TypesComboBox.Items.Add(row.Name);
+                    }
                 }
             }
             var TYPErow = db.RequestTypes.Where(w => w.Id == selectedREQ.RequestType_Id).FirstOrDefault();
@@ -62,9 +68,12 @@ namespace Kurs
             for (int i = 1; i <= db.Workers.Count(); i++)
             {
                 var row = db.Workers.Where(w => w.Id == i).FirstOrDefault();
-                if (row.IsDeleted != true)
+                if (row != null)
                 {
-                    WorkerComboBox.Items.Add("[" + row.Id + "] " + row.Surname + " " + row.Name + " " + row.Lastname);
+                    if (row.IsDeleted != true)
+                    {
+                        WorkerComboBox.Items.Add("[" + row.Id + "] " + row.Surname + " " + row.Name + " " + row.Lastname);
+                    }
                 }
             }
             var WORKERrow = db.Workers.Where(w => w.Id == selectedREQ.Worker_Id).FirstOrDefault();
@@ -74,9 +83,12 @@ namespace Kurs
             for (int i = 1; i <= db.Statuses.Count(); i++)
             {
                 var row = db.Statuses.Where(w => w.Id == i).FirstOrDefault();
-                if (row.IsDeleted != true)
+                if (row != null)
                 {
-                    StatusComboBox.Items.Add(row.Name);
+                    if (row.IsDeleted != true)
+                    {
+                        StatusComboBox.Items.Add(row.Name);
+                    }
                 }
             }
             var STATUSrow = db.Statuses.Where(w => w.Id == selectedREQ.Status_Id).FirstOrDefault();

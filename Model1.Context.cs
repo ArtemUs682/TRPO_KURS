@@ -13,10 +13,10 @@ namespace Kurs
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TRPO_KURSEntities : DbContext
+    public partial class gr682_uatEntities : DbContext
     {
-        public TRPO_KURSEntities()
-            : base("name=TRPO_KURSEntities")
+        public gr682_uatEntities()
+            : base("name=gr682_uatEntities")
         {
         }
     

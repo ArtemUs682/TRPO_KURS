@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="TRPO_KURSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="gr682_uatModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Addresses">
     <Key>
       <PropertyRef Name="Id" />
@@ -9,7 +9,8 @@
     <Property Name="PointX" Type="Double" Nullable="false" />
     <Property Name="PointY" Type="Double" Nullable="false" />
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Clients" Relationship="Self.FK__Clients__Address__1ED998B2" FromRole="Addresses" ToRole="Clients" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Clients" Relationship="Self.FK__Clients__Address__16CE6296" FromRole="Addresses" ToRole="Clients" />
   </EntityType>
   <EntityType Name="Bills">
     <Key>
@@ -23,8 +24,9 @@
     <Property Name="Status" Type="Boolean" Nullable="false" />
     <Property Name="Payment" Type="Double" Nullable="false" />
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Clients" Relationship="Self.FK__Bills__Client_Id__24927208" FromRole="Bills" ToRole="Clients" />
-    <NavigationProperty Name="Resources" Relationship="Self.FK__Bills__Resource___25869641" FromRole="Bills" ToRole="Resources" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Clients" Relationship="Self.FK__Bills__Client_Id__1C873BEC" FromRole="Bills" ToRole="Clients" />
+    <NavigationProperty Name="Resources" Relationship="Self.FK__Bills__Resource___1D7B6025" FromRole="Bills" ToRole="Resources" />
   </EntityType>
   <EntityType Name="Clients">
     <Key>
@@ -37,9 +39,10 @@
     <Property Name="Address_Id" Type="Int32" Nullable="false" />
     <Property Name="Apartment_Number" Type="Int32" />
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Addresses" Relationship="Self.FK__Clients__Address__1ED998B2" FromRole="Clients" ToRole="Addresses" />
-    <NavigationProperty Name="Bills" Relationship="Self.FK__Bills__Client_Id__24927208" FromRole="Clients" ToRole="Bills" />
-    <NavigationProperty Name="Requests" Relationship="Self.FK__Requests__Client__286302EC" FromRole="Clients" ToRole="Requests" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Addresses" Relationship="Self.FK__Clients__Address__16CE6296" FromRole="Clients" ToRole="Addresses" />
+    <NavigationProperty Name="Bills" Relationship="Self.FK__Bills__Client_Id__1C873BEC" FromRole="Clients" ToRole="Bills" />
+    <NavigationProperty Name="Requests" Relationship="Self.FK__Requests__Client__2057CCD0" FromRole="Clients" ToRole="Requests" />
   </EntityType>
   <EntityType Name="Requests">
     <Key>
@@ -54,11 +57,12 @@
     <Property Name="Status_Id" Type="Int32" Nullable="false" />
     <Property Name="User_Id" Type="Int32" Nullable="false" />
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Clients" Relationship="Self.FK__Requests__Client__286302EC" FromRole="Requests" ToRole="Clients" />
-    <NavigationProperty Name="RequestTypes" Relationship="Self.FK__Requests__Reques__29572725" FromRole="Requests" ToRole="RequestTypes" />
-    <NavigationProperty Name="Statuses" Relationship="Self.FK__Requests__Status__2B3F6F97" FromRole="Requests" ToRole="Statuses" />
-    <NavigationProperty Name="Users" Relationship="Self.FK__Requests__User_I__2C3393D0" FromRole="Requests" ToRole="Users" />
-    <NavigationProperty Name="Workers" Relationship="Self.FK__Requests__Worker__2A4B4B5E" FromRole="Requests" ToRole="Workers" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Clients" Relationship="Self.FK__Requests__Client__2057CCD0" FromRole="Requests" ToRole="Clients" />
+    <NavigationProperty Name="RequestTypes" Relationship="Self.FK__Requests__Reques__214BF109" FromRole="Requests" ToRole="RequestTypes" />
+    <NavigationProperty Name="Statuses" Relationship="Self.FK__Requests__Status__2334397B" FromRole="Requests" ToRole="Statuses" />
+    <NavigationProperty Name="Users" Relationship="Self.FK__Requests__User_I__24285DB4" FromRole="Requests" ToRole="Users" />
+    <NavigationProperty Name="Workers" Relationship="Self.FK__Requests__Worker__22401542" FromRole="Requests" ToRole="Workers" />
   </EntityType>
   <EntityType Name="RequestTypes">
     <Key>
@@ -67,7 +71,8 @@
     <Property Name="Id" Type="Int32" Nullable="false" />
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Requests" Relationship="Self.FK__Requests__Reques__29572725" FromRole="RequestTypes" ToRole="Requests" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Requests" Relationship="Self.FK__Requests__Reques__214BF109" FromRole="RequestTypes" ToRole="Requests" />
   </EntityType>
   <EntityType Name="Resources">
     <Key>
@@ -76,7 +81,8 @@
     <Property Name="Id" Type="Int32" Nullable="false" />
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Bills" Relationship="Self.FK__Bills__Resource___25869641" FromRole="Resources" ToRole="Bills" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Bills" Relationship="Self.FK__Bills__Resource___1D7B6025" FromRole="Resources" ToRole="Bills" />
   </EntityType>
   <EntityType Name="Roles">
     <Key>
@@ -85,7 +91,8 @@
     <Property Name="Id" Type="Int32" Nullable="false" />
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Users" Relationship="Self.FK__Users__Role_Id__21B6055D" FromRole="Roles" ToRole="Users" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Users" Relationship="Self.FK__Users__Role_Id__19AACF41" FromRole="Roles" ToRole="Users" />
   </EntityType>
   <EntityType Name="Specialties">
     <Key>
@@ -94,7 +101,8 @@
     <Property Name="Id" Type="Int32" Nullable="false" />
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Workers" Relationship="Self.FK__Workers__Special__1BFD2C07" FromRole="Specialties" ToRole="Workers" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Workers" Relationship="Self.FK__Workers__Special__13F1F5EB" FromRole="Specialties" ToRole="Workers" />
   </EntityType>
   <EntityType Name="Statuses">
     <Key>
@@ -103,7 +111,8 @@
     <Property Name="Id" Type="Int32" Nullable="false" />
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Requests" Relationship="Self.FK__Requests__Status__2B3F6F97" FromRole="Statuses" ToRole="Requests" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Requests" Relationship="Self.FK__Requests__Status__2334397B" FromRole="Statuses" ToRole="Requests" />
   </EntityType>
   <EntityType Name="Users">
     <Key>
@@ -117,8 +126,9 @@
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Lastname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Requests" Relationship="Self.FK__Requests__User_I__2C3393D0" FromRole="Users" ToRole="Requests" />
-    <NavigationProperty Name="Roles" Relationship="Self.FK__Users__Role_Id__21B6055D" FromRole="Users" ToRole="Roles" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Requests" Relationship="Self.FK__Requests__User_I__24285DB4" FromRole="Users" ToRole="Requests" />
+    <NavigationProperty Name="Roles" Relationship="Self.FK__Users__Role_Id__19AACF41" FromRole="Users" ToRole="Roles" />
   </EntityType>
   <EntityType Name="Workers">
     <Key>
@@ -130,10 +140,11 @@
     <Property Name="Lastname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Specialty_Id" Type="Int32" Nullable="false" />
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Requests" Relationship="Self.FK__Requests__Worker__2A4B4B5E" FromRole="Workers" ToRole="Requests" />
-    <NavigationProperty Name="Specialties" Relationship="Self.FK__Workers__Special__1BFD2C07" FromRole="Workers" ToRole="Specialties" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Requests" Relationship="Self.FK__Requests__Worker__22401542" FromRole="Workers" ToRole="Requests" />
+    <NavigationProperty Name="Specialties" Relationship="Self.FK__Workers__Special__13F1F5EB" FromRole="Workers" ToRole="Specialties" />
   </EntityType>
-  <Association Name="FK__Clients__Address__1ED998B2">
+  <Association Name="FK__Clients__Address__16CE6296">
     <End Role="Addresses" Type="Self.Addresses" Multiplicity="1" />
     <End Role="Clients" Type="Self.Clients" Multiplicity="*" />
     <ReferentialConstraint>
@@ -145,7 +156,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Bills__Client_Id__24927208">
+  <Association Name="FK__Bills__Client_Id__1C873BEC">
     <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
     <End Role="Bills" Type="Self.Bills" Multiplicity="*" />
     <ReferentialConstraint>
@@ -157,7 +168,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Bills__Resource___25869641">
+  <Association Name="FK__Bills__Resource___1D7B6025">
     <End Role="Resources" Type="Self.Resources" Multiplicity="1" />
     <End Role="Bills" Type="Self.Bills" Multiplicity="*" />
     <ReferentialConstraint>
@@ -169,7 +180,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Requests__Client__286302EC">
+  <Association Name="FK__Requests__Client__2057CCD0">
     <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
     <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
     <ReferentialConstraint>
@@ -181,7 +192,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Requests__Reques__29572725">
+  <Association Name="FK__Requests__Reques__214BF109">
     <End Role="RequestTypes" Type="Self.RequestTypes" Multiplicity="1" />
     <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
     <ReferentialConstraint>
@@ -193,7 +204,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Requests__Status__2B3F6F97">
+  <Association Name="FK__Requests__Status__2334397B">
     <End Role="Statuses" Type="Self.Statuses" Multiplicity="1" />
     <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
     <ReferentialConstraint>
@@ -205,7 +216,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Requests__User_I__2C3393D0">
+  <Association Name="FK__Requests__User_I__24285DB4">
     <End Role="Users" Type="Self.Users" Multiplicity="1" />
     <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
     <ReferentialConstraint>
@@ -217,7 +228,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Requests__Worker__2A4B4B5E">
+  <Association Name="FK__Requests__Worker__22401542">
     <End Role="Workers" Type="Self.Workers" Multiplicity="0..1" />
     <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
     <ReferentialConstraint>
@@ -229,7 +240,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Users__Role_Id__21B6055D">
+  <Association Name="FK__Users__Role_Id__19AACF41">
     <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
     <End Role="Users" Type="Self.Users" Multiplicity="*" />
     <ReferentialConstraint>
@@ -241,7 +252,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Workers__Special__1BFD2C07">
+  <Association Name="FK__Workers__Special__13F1F5EB">
     <End Role="Specialties" Type="Self.Specialties" Multiplicity="1" />
     <End Role="Workers" Type="Self.Workers" Multiplicity="*" />
     <ReferentialConstraint>
@@ -253,7 +264,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="TRPO_KURSEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="gr682_uatEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Addresses" EntityType="Self.Addresses" />
     <EntitySet Name="Bills" EntityType="Self.Bills" />
     <EntitySet Name="Clients" EntityType="Self.Clients" />
@@ -265,43 +276,43 @@
     <EntitySet Name="Statuses" EntityType="Self.Statuses" />
     <EntitySet Name="Users" EntityType="Self.Users" />
     <EntitySet Name="Workers" EntityType="Self.Workers" />
-    <AssociationSet Name="FK__Clients__Address__1ED998B2" Association="Self.FK__Clients__Address__1ED998B2">
+    <AssociationSet Name="FK__Clients__Address__16CE6296" Association="Self.FK__Clients__Address__16CE6296">
       <End Role="Addresses" EntitySet="Addresses" />
       <End Role="Clients" EntitySet="Clients" />
     </AssociationSet>
-    <AssociationSet Name="FK__Bills__Client_Id__24927208" Association="Self.FK__Bills__Client_Id__24927208">
+    <AssociationSet Name="FK__Bills__Client_Id__1C873BEC" Association="Self.FK__Bills__Client_Id__1C873BEC">
       <End Role="Clients" EntitySet="Clients" />
       <End Role="Bills" EntitySet="Bills" />
     </AssociationSet>
-    <AssociationSet Name="FK__Bills__Resource___25869641" Association="Self.FK__Bills__Resource___25869641">
+    <AssociationSet Name="FK__Bills__Resource___1D7B6025" Association="Self.FK__Bills__Resource___1D7B6025">
       <End Role="Resources" EntitySet="Resources" />
       <End Role="Bills" EntitySet="Bills" />
     </AssociationSet>
-    <AssociationSet Name="FK__Requests__Client__286302EC" Association="Self.FK__Requests__Client__286302EC">
+    <AssociationSet Name="FK__Requests__Client__2057CCD0" Association="Self.FK__Requests__Client__2057CCD0">
       <End Role="Clients" EntitySet="Clients" />
       <End Role="Requests" EntitySet="Requests" />
     </AssociationSet>
-    <AssociationSet Name="FK__Requests__Reques__29572725" Association="Self.FK__Requests__Reques__29572725">
+    <AssociationSet Name="FK__Requests__Reques__214BF109" Association="Self.FK__Requests__Reques__214BF109">
       <End Role="RequestTypes" EntitySet="RequestTypes" />
       <End Role="Requests" EntitySet="Requests" />
     </AssociationSet>
-    <AssociationSet Name="FK__Requests__Status__2B3F6F97" Association="Self.FK__Requests__Status__2B3F6F97">
+    <AssociationSet Name="FK__Requests__Status__2334397B" Association="Self.FK__Requests__Status__2334397B">
       <End Role="Statuses" EntitySet="Statuses" />
       <End Role="Requests" EntitySet="Requests" />
     </AssociationSet>
-    <AssociationSet Name="FK__Requests__User_I__2C3393D0" Association="Self.FK__Requests__User_I__2C3393D0">
+    <AssociationSet Name="FK__Requests__User_I__24285DB4" Association="Self.FK__Requests__User_I__24285DB4">
       <End Role="Users" EntitySet="Users" />
       <End Role="Requests" EntitySet="Requests" />
     </AssociationSet>
-    <AssociationSet Name="FK__Requests__Worker__2A4B4B5E" Association="Self.FK__Requests__Worker__2A4B4B5E">
+    <AssociationSet Name="FK__Requests__Worker__22401542" Association="Self.FK__Requests__Worker__22401542">
       <End Role="Workers" EntitySet="Workers" />
       <End Role="Requests" EntitySet="Requests" />
     </AssociationSet>
-    <AssociationSet Name="FK__Users__Role_Id__21B6055D" Association="Self.FK__Users__Role_Id__21B6055D">
+    <AssociationSet Name="FK__Users__Role_Id__19AACF41" Association="Self.FK__Users__Role_Id__19AACF41">
       <End Role="Roles" EntitySet="Roles" />
       <End Role="Users" EntitySet="Users" />
     </AssociationSet>
-    <AssociationSet Name="FK__Workers__Special__1BFD2C07" Association="Self.FK__Workers__Special__1BFD2C07">
+    <AssociationSet Name="FK__Workers__Special__13F1F5EB" Association="Self.FK__Workers__Special__13F1F5EB">
       <End Role="Specialties" EntitySet="Specialties" />
       <End Role="Workers" EntitySet="Workers" />
     </AssociationSet>

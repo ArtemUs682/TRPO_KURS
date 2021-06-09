@@ -1,19 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище TRPO_KURSModelContainer" CdmEntityContainer="TRPO_KURSEntities">
+  <EntityContainerMapping StorageEntityContainer="Хранилище gr682_uatModelContainer" CdmEntityContainer="gr682_uatEntities">
     <EntitySetMapping Name="Addresses">
-      <EntityTypeMapping TypeName="TRPO_KURSModel.Addresses">
+      <EntityTypeMapping TypeName="gr682_uatModel.Addresses">
         <MappingFragment StoreEntitySet="Addresses">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="PointX" ColumnName="PointX" />
           <ScalarProperty Name="PointY" ColumnName="PointY" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Bills">
-      <EntityTypeMapping TypeName="TRPO_KURSModel.Bills">
+      <EntityTypeMapping TypeName="gr682_uatModel.Bills">
         <MappingFragment StoreEntitySet="Bills">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Year" ColumnName="Year" />
@@ -23,11 +24,12 @@
           <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="Payment" ColumnName="Payment" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Clients">
-      <EntityTypeMapping TypeName="TRPO_KURSModel.Clients">
+      <EntityTypeMapping TypeName="gr682_uatModel.Clients">
         <MappingFragment StoreEntitySet="Clients">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Surname" ColumnName="Surname" />
@@ -36,11 +38,12 @@
           <ScalarProperty Name="Address_Id" ColumnName="Address_Id" />
           <ScalarProperty Name="Apartment_Number" ColumnName="Apartment_Number" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Requests">
-      <EntityTypeMapping TypeName="TRPO_KURSModel.Requests">
+      <EntityTypeMapping TypeName="gr682_uatModel.Requests">
         <MappingFragment StoreEntitySet="Requests">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Client_Id" ColumnName="Client_Id" />
@@ -51,56 +54,62 @@
           <ScalarProperty Name="Status_Id" ColumnName="Status_Id" />
           <ScalarProperty Name="User_Id" ColumnName="User_Id" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="RequestTypes">
-      <EntityTypeMapping TypeName="TRPO_KURSModel.RequestTypes">
+      <EntityTypeMapping TypeName="gr682_uatModel.RequestTypes">
         <MappingFragment StoreEntitySet="RequestTypes">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Resources">
-      <EntityTypeMapping TypeName="TRPO_KURSModel.Resources">
+      <EntityTypeMapping TypeName="gr682_uatModel.Resources">
         <MappingFragment StoreEntitySet="Resources">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Roles">
-      <EntityTypeMapping TypeName="TRPO_KURSModel.Roles">
+      <EntityTypeMapping TypeName="gr682_uatModel.Roles">
         <MappingFragment StoreEntitySet="Roles">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Specialties">
-      <EntityTypeMapping TypeName="TRPO_KURSModel.Specialties">
+      <EntityTypeMapping TypeName="gr682_uatModel.Specialties">
         <MappingFragment StoreEntitySet="Specialties">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Statuses">
-      <EntityTypeMapping TypeName="TRPO_KURSModel.Statuses">
+      <EntityTypeMapping TypeName="gr682_uatModel.Statuses">
         <MappingFragment StoreEntitySet="Statuses">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="TRPO_KURSModel.Users">
+      <EntityTypeMapping TypeName="gr682_uatModel.Users">
         <MappingFragment StoreEntitySet="Users">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Login" ColumnName="Login" />
@@ -110,11 +119,12 @@
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Lastname" ColumnName="Lastname" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Workers">
-      <EntityTypeMapping TypeName="TRPO_KURSModel.Workers">
+      <EntityTypeMapping TypeName="gr682_uatModel.Workers">
         <MappingFragment StoreEntitySet="Workers">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Surname" ColumnName="Surname" />
@@ -122,6 +132,7 @@
           <ScalarProperty Name="Lastname" ColumnName="Lastname" />
           <ScalarProperty Name="Specialty_Id" ColumnName="Specialty_Id" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

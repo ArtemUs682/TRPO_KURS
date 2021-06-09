@@ -23,6 +23,7 @@ namespace Kurs
         public int Status_Id { get; set; }
         public int User_Id { get; set; }
         public bool IsDeleted { get; set; }
+        public Nullable<System.DateTime> DeletedDate { get; set; }
     
         public virtual Clients Clients { get; set; }
         public virtual RequestTypes RequestTypes { get; set; }

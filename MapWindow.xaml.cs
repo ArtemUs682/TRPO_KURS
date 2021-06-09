@@ -23,14 +23,17 @@ namespace Kurs
     /// </summary>
     public partial class MapWindow : Window
     {
-        public TRPO_KURSEntities db = new TRPO_KURSEntities();
+        public gr682_uatEntities db = new gr682_uatEntities();
         public MapWindow()
         {
             InitializeComponent();
             for(int i = 1; i < db.Addresses.Count(); i++)
             {
                 var row = db.Addresses.Where(w => w.Id == i).FirstOrDefault();
-                FindBox.Items.Add(row.Name);
+                if (row != null)
+                {
+                    FindBox.Items.Add(row.Name);
+                }
             }
         }
 
@@ -69,18 +72,22 @@ namespace Kurs
             for (int i = 1; i <= db.Addresses.Count(); i++)
             {
                 var row = db.Addresses.Where(w => w.Id == i).FirstOrDefault();
-                if (row.IsDeleted != true)
+
+                if (row != null)
                 {
-                    GMap.NET.WindowsPresentation.GMapMarker marker = new GMap.NET.WindowsPresentation.GMapMarker(new PointLatLng(row.PointX, row.PointY));
-                    marker.Shape = new Image()
+                    if (row.IsDeleted != true)
                     {
-                        Source = new BitmapImage(new Uri("pack://application:,,,/Images/geometka.png")),
-                        Width = 30,
-                        Height = 60,
-                        ToolTip = row.Name,
-                        Visibility = Visibility.Visible
-                    };
-                    gmap.Markers.Add(marker);
+                        GMap.NET.WindowsPresentation.GMapMarker marker = new GMap.NET.WindowsPresentation.GMapMarker(new PointLatLng(row.PointX, row.PointY));
+                        marker.Shape = new Image()
+                        {
+                            Source = new BitmapImage(new Uri("pack://application:,,,/Images/geometka.png")),
+                            Width = 30,
+                            Height = 60,
+                            ToolTip = row.Name,
+                            Visibility = Visibility.Visible
+                        };
+                        gmap.Markers.Add(marker);
+                    }
                 }
             }
         }

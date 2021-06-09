@@ -21,7 +21,7 @@ namespace Kurs
     /// </summary>
     public partial class TechsWindow : Window
     {
-        SqlConnection con = new SqlConnection("Data Source=ARTEM-ПК\\ArtemPC;Initial Catalog=TRPO_KURS;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=mssql;Initial Catalog=gr682_uat;Integrated Security=True");
         public TechsWindow()
         {
             InitializeComponent();
@@ -115,19 +115,19 @@ namespace Kurs
             dataTable = WorkWithQuery(query);
             SpecialtiesDataGrid.ItemsSource = dataTable.DefaultView;
 
-            query = "SELECT Id AS '№', Name AS Наименование FROM Statuses Statuses.IsDeleted = 0";
+            query = "SELECT Id AS '№', Name AS Наименование FROM Statuses WHERE Statuses.IsDeleted = 0";
             dataTable = WorkWithQuery(query);
             StatusesDataGrid.ItemsSource = dataTable.DefaultView;
 
-            query = "SELECT Id AS '№', Name AS Наименование FROM RequestTypes RequestTypes.IsDeleted = 0";
+            query = "SELECT Id AS '№', Name AS Наименование FROM RequestTypes WHERE RequestTypes.IsDeleted = 0";
             dataTable = WorkWithQuery(query);
             TypesDataGrid.ItemsSource = dataTable.DefaultView;
 
-            query = "SELECT Id AS '№', Name AS Наименование FROM Resources Resources.IsDeleted = 0";
+            query = "SELECT Id AS '№', Name AS Наименование FROM Resources WHERE Resources.IsDeleted = 0";
             dataTable = WorkWithQuery(query);
             ResourcesDataGrid.ItemsSource = dataTable.DefaultView;
 
-            query = "SELECT Id AS '№', Name AS Наименование FROM Roles Roles.IsDeleted = 0";
+            query = "SELECT Id AS '№', Name AS Наименование FROM Roles WHERE Roles.IsDeleted = 0";
             dataTable = WorkWithQuery(query);
             RolesDataGrid.ItemsSource = dataTable.DefaultView;
         }
